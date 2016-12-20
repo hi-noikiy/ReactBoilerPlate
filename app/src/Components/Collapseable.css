@@ -1,0 +1,18 @@
+.collapse-toggle{
+	overflow: hidden;
+}
+.collapse-toggle:not(.collapsed){
+	max-height:30vw;
+	transition: max-height 0.3s;
+}
+.collapse-toggle.collapsed{
+	max-height:0;
+	transition: max-height 0.3s;
+}
+
+@media (min-width: 992px){
+	.collapse-toggle:not(.collapsed){
+		max-height:5em;
+		transition: max-height 0.3s;
+	}
+}
