@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Alert from '../Components/Alert/Alert';
 import Button from '../Components/Button/Button';
 import InputRange from '../Components/Form/InputRange/InputRange';
+import InputText from '../Components/Form/InputText/InputText';
 import LoadingBar from '../Components/LoadingBar/LoadingBar';
 
 class Components extends Component {
@@ -22,6 +23,24 @@ class Components extends Component {
 				<Button label="Button" type="danger" />
 				<Button label="Button" type="success" />
 				<h2>Forms</h2>
+				<InputText id="InputText_Email"
+						   label="Email"
+						   name="email"
+						   type="email"
+						   value=""
+				/>
+				<InputText id="InputText_Password"
+						   label="Password"
+						   name="password"
+						   type="password"
+						   value=""
+				/>
+				<InputText id="InputText_Number"
+						   label="Favorite Number"
+						   name="number"
+						   type="number"
+						   value=""
+				/>
 				<InputRange id="RangeID"
 							label="Satisfaction"
 							name="SatisfactionRange"

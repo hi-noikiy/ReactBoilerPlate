@@ -9,21 +9,14 @@ class InputRange extends Component {
 		};
 		this.handleInput = this.handleInput.bind(this);
 	}
-	componentDidMount() {
-		var range = document.getElementById(this.props.id);
-		var valueIndicator = range.parentElement.getElementsByClassName('range-val')[0];
-		valueIndicator.innerHTML = range.value;
-	}
 	handleInput(e) {
-		var valueIndicator = e.target.parentElement.getElementsByClassName('range-val')[0];
-		valueIndicator.innerHTML = e.target.value;
 		this.setState({value: e.target.value});
 	}
 	render() {
 		return (
 			<div className="form-element-range">
 				<label htmlFor={this.props.id}>
-					{this.props.label}: <span className="range-val"></span>
+					{this.props.label}: <span className="range-val">{this.state.value}</span>
 				</label>
 				<input
 					id={this.props.id}
@@ -34,10 +27,8 @@ class InputRange extends Component {
 					step={this.props.step}
 					value={this.state.value}
 					onChange={this.handleInput}
-					onMouseMove={this.handleInput}
-					onTouchMove={this.handleInput}
+					onInput={this.handleInput}
 				/>
-				<div id={this.props.id+"-range-id"} className="range-indicator"></div>
 			</div>
 		);
 	}
