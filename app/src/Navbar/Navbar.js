@@ -19,7 +19,24 @@ class Navbar extends Component {
 			}
 		});
 	}
-
+	handleHomeClick(){
+		var ham = document.getElementById('ham-menu');
+		var drawer = document.getElementById('drawer');
+		var navbar =  document.getElementById('navbar');
+		if(ham.className === '') {
+			drawer.classList.add('open');
+			ham.className = 'open';
+			navbar.classList.add('scrolled');
+		} else {
+			drawer.classList.remove('open');
+			ham.className = '';
+			if(window.scrollY > navbar.offsetHeight && drawer.className !== 'open'){
+				navbar.classList.add('scrolled');
+			} else if (navbar.classList.contains('scrolled')) {
+				navbar.classList.remove('scrolled');
+			}
+		}
+	}
 	render() {
 		var links = [
 			{url:'/about', label: 'About'},
@@ -31,7 +48,7 @@ class Navbar extends Component {
 		return (
 			<nav className="Navbar" id="navbar">
 				<div className="left-nav">
-					<Link to="/" className="home-link">
+					<Link to="/" className="home-link" onClick={this.handleHomeClick}>
 						<Logo />
 					</Link>
 				</div>
