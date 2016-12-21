@@ -1,0 +1,115 @@
+.form-element-list {
+	position: relative;
+	display: block;
+	line-height: 1.5em;
+	margin: 0.4em 0 0 0;
+}
+.form-element-list ul{
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+.form-element-list ul > li{
+	display: block;
+	position: relative;
+	height: 1.5em;
+}
+.form-element-list ul > li::before{
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	content: '';
+	height: 1em;
+	width: 1em;
+	margin: 0.5em;
+	box-shadow: 0 0 0 0.05em #bbb;
+}
+.form-element-list ul > li > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	line-height: 2em;
+	padding-left: 2.5em;
+}
+.form-element-list ul > li > label:hover{
+	cursor: pointer;
+}
+.form-element-list ul > li > input + label::before {
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	content: '';
+	top: 0;
+	left: 0;
+	margin: 1em;
+	width: 0;
+	height: 0;
+	opacity: 0.15;
+	transition: all 0.17s ease;
+}
+.form-element-list ul > li > input + label:hover::before {
+	margin:0.65em;
+	width: 0.7em;
+	height: 0.7em;
+	background-color: #1da1f2;
+}
+.form-element-list ul > li > input:checked + label::before {
+	margin: 1em;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.form-element-list ul > li > input + label::after {
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	background-color: #1da1f2;
+	content: '';
+	top: 0;
+	left: 0;
+	margin:1em;
+	width: 0;
+	height: 0;
+	z-index: 1;
+	transition: all 0.2s ease;
+}
+.form-element-list ul > li > input:checked + label::after {
+	margin:0.65em;
+	width: 0.7em;
+	height: 0.7em;
+	animation: check-checkbox 0.25s ease;
+}
+@keyframes check-checkbox {
+	0%{
+		margin:1em;
+		width: 0;
+		height: 0;
+	}
+	75%{
+		margin:0.5em;
+		width: 1em;
+		height: 1em;
+	}
+	100%{
+		margin:0.65em;
+		width: 0.7em;
+		height: 0.7em;
+	}
+}
+.form-element-list input{
+	display: none;
+}
+.form-element-list.form-list-radio ul > li::before,
+.form-element-list.form-list-radio input + label::before,
+.form-element-list.form-list-radio input + label::after {
+	border-radius: 100%;
+}
+.form-element-list .list-title {
+	color: #888;
+}

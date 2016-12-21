@@ -3,6 +3,8 @@ import Alert from '../Components/Alert/Alert';
 import Button from '../Components/Button/Button';
 import InputRange from '../Components/Form/InputRange/InputRange';
 import InputText from '../Components/Form/InputText/InputText';
+import InputList from '../Components/Form/InputList/InputList';
+import InputSelect from '../Components/Form/InputSelect/InputSelect';
 import LoadingBar from '../Components/LoadingBar/LoadingBar';
 
 class Components extends Component {
@@ -40,6 +42,39 @@ class Components extends Component {
 						   name="number"
 						   type="number"
 						   value=""
+				/>
+				<InputSelect id="InputSelect_Religion"
+							 name="religion"
+							 label="Religion?"
+							 options={[
+								 {label: 'Choose a Religion...', value: ''},
+								 {label: 'Buddhism', value: 'buddhist'},
+								 {label: 'Christianity', value: 'christian'},
+								 {label: 'Judaism', value: 'jewish'},
+								 {label: 'Islam', value: 'muslim'},
+							 ]}
+				/>
+				<InputList label="What is life?"
+						   type="checkbox"
+						   name="life"
+						   options={[
+							   {label: '42', value: '42'},
+							   {label: 'Happiness', value: 'happy'},
+							   {label: 'Love', value: 'love'},
+							   {label: 'Silicon Valley', value: 'siliconValley'}
+						   ]}
+						   selected="siliconValley"
+				/>
+				<InputList label="Favorite color?"
+						   type="radio"
+						   name="color"
+						   options={[
+							   {label: 'Blue', value: 'blue'},
+							   {label: 'Red', value: 'red'},
+							   {label: 'Yellow', value: 'yellow'},
+							   {label: 'Green', value: 'green'}
+						   ]}
+						   selected="blue"
 				/>
 				<InputRange id="RangeID"
 							label="Satisfaction"
