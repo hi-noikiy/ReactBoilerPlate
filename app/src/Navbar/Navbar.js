@@ -31,9 +31,9 @@ class Navbar extends Component {
 		return (
 			<nav className="Navbar" id="navbar">
 				<div className="left-nav">
-					<a href="/" className="home-link">
+					<Link to="/" className="home-link">
 						<Logo />
-					</a>
+					</Link>
 				</div>
 				<div className="right-nav">
 					{linkList}

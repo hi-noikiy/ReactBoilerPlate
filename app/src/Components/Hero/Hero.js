@@ -26,6 +26,15 @@ class Hero extends Component {
 		);
 	}
 }
+Hero.propTypes = {
+	src: React.PropTypes.string.isRequired,
+	header: React.PropTypes.string,
+	subheader: React.PropTypes.string,
+	link: React.PropTypes.shape({
+		label: React.PropTypes.string,
+		href: React.PropTypes.string
+	})
+};
 Hero.defaultProps = {
 	src: '',
 	header: '',

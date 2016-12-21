@@ -8,11 +8,11 @@ class HamMenu extends Component {
 		var drawer = document.getElementById('drawer');
 		var navbar =  document.getElementById('navbar');
 		if(ham.className === '') {
-			drawer.className = 'open';
+			drawer.classList.add('open');
 			ham.className = 'open';
 			navbar.classList.add('scrolled');
 		} else {
-			drawer.className = 'close';
+			drawer.classList.remove('open');
 			ham.className = '';
 			if(window.scrollY > navbar.offsetHeight && drawer.className !== 'open'){
 				navbar.classList.add('scrolled');

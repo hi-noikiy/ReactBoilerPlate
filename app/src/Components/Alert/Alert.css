@@ -53,6 +53,7 @@
 .alert.clickable::before{
 	content: '';
 	position: absolute;
+	background-color: #eaeaea;
 	left: 0;
 	top: 0;
 	width: 100%;

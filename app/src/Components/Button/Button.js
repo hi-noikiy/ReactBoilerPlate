@@ -17,7 +17,7 @@ class Button extends Component {
 }
 Button.propTypes = {
 	label: React.PropTypes.string.isRequired,
-	type: React.PropTypes.string,
+	type: React.PropTypes.oneOf(['default', 'primary', 'warning', 'danger', 'success']),
 	icon: React.PropTypes.string
 };
 Button.defaultProps = {
