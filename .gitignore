@@ -1,0 +1,9 @@
+# misc
+.vscode
+.idea
+node_modules/
+package-lock.json
+
+# builds
+build/
+dist/
