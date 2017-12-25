@@ -1,0 +1,29 @@
+{
+  "name": "reactboilerplate",
+  "version": "0.0.1",
+  "description": "A repository to start ReactJS projects from",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewton/ReactBoilerPlate.git"
+  },
+  "keywords": [
+    "React",
+    "NodeJS",
+    "JS",
+    "JSX",
+    "Boilerplate"
+  ],
+  "author": "znewton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/znewton/ReactBoilerPlate/issues"
+  },
+  "homepage": "https://github.com/znewton/ReactBoilerPlate#readme"
+}

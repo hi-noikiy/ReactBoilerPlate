@@ -1,0 +1,36 @@
+{
+  "name": "reactboilerplate-app",
+  "version": "0.0.1",
+  "description": "The client for ReactBoilerPlate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewton/ReactBoilerPlate.git"
+  },
+  "keywords": [
+    "React",
+    "SCSS",
+    "JS",
+    "JSX"
+  ],
+  "author": "znewton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/znewton/ReactBoilerPlate/issues"
+  },
+  "homepage": "https://github.com/znewton/ReactBoilerPlate#readme",
+  "dependencies": {
+    "@fortawesome/react-fontawesome": "0.0.17",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
